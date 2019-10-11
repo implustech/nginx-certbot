@@ -6,4 +6,4 @@ RUN  apt-get update && apt-get install -y certbot python-certbot-nginx  && apt-g
 COPY ./entrypoint.sh entrypoint.sh
 
 ENTRYPOINT ["./entrypoint.sh"]
-
+CMD  ["nginx", "-g", "daemon off;"]
